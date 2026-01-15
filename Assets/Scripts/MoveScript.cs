@@ -15,6 +15,7 @@ public float gravity = 20.0f;
 public float lookSpeed = 2.0f;
  public float lookXLimit = 45.0f;
  public float crouchHeight = 1;
+ 
  public float standingHeight = 2.0f;
  public float crouchSpeed = 3.0f;
 private Vector3 moveDirection = Vector3.zero;
@@ -26,11 +27,9 @@ private CharacterController characterController;
     void Start()
     {
 
+        characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        
-        characterController = GetComponent<CharacterController>();
-
 
     }
 
